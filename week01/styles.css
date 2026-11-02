@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --ink: #172033;
+  --muted: #596579;
+  --accent: #3157c8;
+  --page: #f4f6fb;
+  --surface: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+.container {
+  width: min(900px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 54px 0 34px;
+  color: white;
+  background: linear-gradient(135deg, #172b59, #3157c8);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  opacity: 0.8;
+}
+
+.site-header h1 {
+  margin: 0 0 24px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+nav a {
+  padding: 8px 15px;
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: 999px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background: rgba(255,255,255,0.18);
+}
+
+main {
+  padding-top: 34px;
+  padding-bottom: 48px;
+}
+
+.intro {
+  padding: 26px 0 22px;
+}
+
+.intro .eyebrow {
+  color: var(--accent);
+}
+
+.intro h2 {
+  margin: 0 0 10px;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+}
+
+.lead {
+  max-width: 690px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.content-card {
+  margin: 18px 0;
+  padding: 24px 28px;
+  border: 1px solid #e5e9f2;
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(25, 42, 75, 0.045);
+  scroll-margin-top: 20px;
+}
+
+.content-card h2 {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 1.35rem;
+}
+
+.content-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.content-card ul {
+  margin: 0;
+  padding-left: 22px;
+  color: var(--muted);
+}
+
+footer {
+  padding: 22px 0;
+  background: #172033;
+  color: #dce3f1;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 560px) {
+  .site-header {
+    padding-top: 38px;
+  }
+
+  .content-card {
+    padding: 20px;
+  }
+}
